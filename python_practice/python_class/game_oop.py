@@ -48,7 +48,30 @@ class Game:
                 print("我赢了")
                 break
 
+class HouYi(Game):
+    # 定义护甲属性
+    def __init__(self):
+        self.defense = 100
+        super().__init__()
+    # 改造figth方法
+    def fight(self):
+        while True:
+            self.my_hp = self.my_hp + self.defense - self.enemy_power
 
+            self.enemy_hp = self.enemy_hp - self.my_power
+
+            print(self.my_hp)
+            # 判断谁的血量小于0
+            if self.my_hp <= 0:
+                print(f"我的血量：{self.my_hp}")
+                print(f"敌人的血量：{self.enemy_hp}")
+                print("我输了")
+                break
+            elif self.enemy_hp <= 0:
+                print(f"我的血量：{self.my_hp}")
+                print(f"敌人的血量：{self.enemy_hp}")
+                print("我赢了")
+                break
 
 game = Game()
 game.fight()

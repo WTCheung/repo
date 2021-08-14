@@ -44,5 +44,3 @@ class TongLao:
                 print("我赢了！")
             else:
                 print("我输了")
-tong = TongLao(10000,500)
-tong.fight_zms(5000,800)

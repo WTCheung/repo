@@ -22,8 +22,11 @@ def fight():
     #判断输赢
     if my_final_hp > enemy_hp:
         print("我赢了")
-    elif my_final_hp < enemy_final_hp:
-        print("我输了")
+    #elif my_final_hp < enemy_final_hp:
+        #print("我输了")
     else:
-        print("平局")
+        print("loser")
+        #三目运算 复制当前行的代码  ctl+d
+        #自动导包alt+回车
+    print("我赢了") if my_final_hp > enemy_final_hp else print("我输了")
 fight()
